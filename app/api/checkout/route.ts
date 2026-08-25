@@ -90,7 +90,7 @@ export async function POST(req: Request) {
     const billingCity = sameAsShipping ? shippingCity : (billingDetails?.city || "");
     const billingAddress = sameAsShipping ? shippingAddress : (billingDetails?.address || "");
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_BASE_URL || "https://tapview.hu";
 
     // Vendég esetén a sikeres oldalt hívjuk meg (ha van fiókja, az /account#orders-re is irányíthatod)
     const successUrl = userId 
