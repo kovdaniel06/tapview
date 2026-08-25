@@ -4,18 +4,18 @@ export default function PrivacyPolicySection() {
   return (
     <PolicyLayout
       title="Privacy Policy"
-      lastUpdated="August 4, 2026"
+      lastUpdated="August 25, 2026"
       sections={[
         {
           id: "overview",
           title: "Overview",
           content: (
             <p>
-              Project X99 (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;)
+              Tapview (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;)
               respects your privacy and is committed to protecting your
               personal data. This Privacy Policy explains how we collect,
               use, and protect your information when you visit our website
-              or purchase our physical NFC & QR Review products.
+              (https://tapview.hu) or purchase our physical NFC & QR Review products.
             </p>
           ),
         },
@@ -92,7 +92,7 @@ export default function PrivacyPolicySection() {
                 providers strictly to fulfill your purchase:
               </p>
               <ul className="list-disc space-y-2 pl-6">
-                <li>Courier and shipping providers for 1-2 day order fulfillment.</li>
+                <li>Courier and shipping providers for order fulfillment.</li>
                 <li>Payment processors for transaction handling.</li>
               </ul>
             </>
@@ -107,10 +107,10 @@ export default function PrivacyPolicySection() {
               access to, correction of, or deletion of your personal data
               stored with us. To exercise any of these rights, contact us at{" "}
               <a
-                href="mailto:support@projectx99.com"
+                href="mailto:info@tapview.hu"
                 className="text-[#7BAAF7] underline underline-offset-2 hover:text-white"
               >
-                support@projectx99.com
+                info@tapview.hu
               </a>
               .
             </p>

@@ -4,14 +4,14 @@ export default function TermsOfServiceSection() {
   return (
     <PolicyLayout
       title="Terms of Service"
-      lastUpdated="August 4, 2026"
+      lastUpdated="August 25, 2026"
       sections={[
         {
           id: "agreement",
           title: "Agreement to Terms",
           content: (
             <p>
-              By accessing or purchasing from Project X99, you agree to be
+              By accessing or purchasing from Tapview, you agree to be
               bound by these Terms of Service. If you do not agree to these
               terms, please do not order our products or use our services.
             </p>
@@ -22,7 +22,7 @@ export default function TermsOfServiceSection() {
           title: "Products & One-Time Payment",
           content: (
             <>
-              <p>Project X99 sells physical NFC Review Stands and Cards.</p>
+              <p>Tapview sells physical NFC Review Stands and Cards.</p>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
                   All purchases are one-time payments with no recurring
@@ -42,7 +42,7 @@ export default function TermsOfServiceSection() {
           content: (
             <>
               <p>
-                Project X99 is an independent entity and is not affiliated,
+                Tapview is an independent entity and is not affiliated,
                 endorsed, or sponsored by Google LLC or Alphabet Inc.
               </p>
               <ul className="list-disc space-y-2 pl-6">

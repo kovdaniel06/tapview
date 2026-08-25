@@ -4,7 +4,7 @@ export default function CookiePolicySection() {
   return (
     <PolicyLayout
       title="Cookie Policy"
-      lastUpdated="August 4, 2026"
+      lastUpdated="August 25, 2026"
       sections={[
         {
           id: "what-are-cookies",
@@ -51,7 +51,7 @@ export default function CookiePolicySection() {
               When a customer taps your physical NFC Review Stand or scans
               the QR code,{" "}
               <strong className="text-white">
-                no cookies are set or tracked by Project X99
+                no cookies are set or tracked by Tapview
               </strong>
               . The user&apos;s device opens the native Google browser URL
               directly.
