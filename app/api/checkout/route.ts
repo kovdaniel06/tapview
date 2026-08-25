@@ -90,12 +90,22 @@ export async function POST(req: Request) {
     const billingCity = sameAsShipping ? shippingCity : (billingDetails?.city || "");
     const billingAddress = sameAsShipping ? shippingAddress : (billingDetails?.address || "");
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_BASE_URL || "https://tapview.hu";
+    // --- BIZTONSÁGOS BASE URL FELDOLGOZÁS ---
+    // Kiszedi a markdown hivatkozásokat, szóközöket és záró perjeleket
+    const rawEnvUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_BASE_URL || "https://tapview.hu";
+    const cleanUrl = rawEnvUrl
+      .replace(/\[.*?\]\((.*?)\)/g, "$1") // Ha markdown link lenne [url](url)
+      .replace(/[()[\]'"\s]/g, "")         // Zárójelek, idézőjelek és szóközök eltávolítása
+      .replace(/\/$/, "");                // Lezáró / eltávolítása
 
-    // Vendég esetén a sikeres oldalt hívjuk meg (ha van fiókja, az /account#orders-re is irányíthatod)
+    const baseUrl = cleanUrl.startsWith("http") ? cleanUrl : `https://${cleanUrl}`;
+
+    // Sikeres és megszakított URL-ek összeállítása
     const successUrl = userId 
       ? `${baseUrl}/account#orders` 
       : `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`;
+
+    const cancelUrl = `${baseUrl}/#pricing`;
 
     // 5. Stripe Session létrehozása
     const session = await stripe.checkout.sessions.create({
@@ -116,7 +126,7 @@ export async function POST(req: Request) {
       ],
       customer_email: customerEmail,
       metadata: {
-        userId: userId || "", // A webhookban tisztítjuk null-ra
+        userId: userId || "",
         planName: planName,
         customerName: customerName,
         customerEmail: customerEmail,
@@ -138,7 +148,7 @@ export async function POST(req: Request) {
         billingAddress: billingAddress,
       },
       success_url: successUrl,
-      cancel_url: `${baseUrl}/#pricing`,
+      cancel_url: cancelUrl,
     });
 
     return NextResponse.json({ url: session.url });
