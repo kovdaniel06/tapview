@@ -48,7 +48,7 @@ export default function Navbar() {
           </div>
           <div>
             <h1 className="text-lg font-bold tracking-wide text-white">
-              TAP<span className="text-[#4285F4]"> VIEW</span>
+              TAP<span className="text-[#4285F4]">VIEW</span>
             </h1>
             <p className="text-[10px] uppercase tracking-wider text-neutral-400">Google Review NFC</p>
           </div>
