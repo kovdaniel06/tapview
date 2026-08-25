@@ -5,6 +5,16 @@ import { ClerkProvider } from "@clerk/nextjs";
 export const metadata: Metadata = {
   title: "Tapview - Szerezz több Google értékelést egyetlen érintéssel",
   description: "Segíts az elégedett ügyfeleknek azonnal Google értékelést hagyni prémium NFC kártyákkal és állványokkal.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [
+      { url: "/apple-icon.png" },
+    ],
+  },
   openGraph: {
     title: "Tapview - NFC Google Értékelő Állványok",
     description: "Növeld a Google értékeléseid számát egyszerűen és gyorsan NFC technológiával.",
