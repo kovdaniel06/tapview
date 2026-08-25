@@ -3,21 +3,17 @@ import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tapview.hu"),
   title: "Tapview - Szerezz több Google értékelést egyetlen érintéssel",
-  description: "Segíts az elégedett ügyfeleknek azonnal Google értékelést hagyni prémium NFC kártyákkal és állványokkal.",
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png" },
-    ],
-    shortcut: ["/favicon.ico"],
-    apple: [
-      { url: "/apple-icon.png" },
-    ],
+  description:
+    "Segíts az elégedett ügyfeleknek azonnal Google értékelést hagyni prémium NFC kártyákkal és állványokkal.",
+  alternates: {
+    canonical: "/",
   },
   openGraph: {
     title: "Tapview - NFC Google Értékelő Állványok",
-    description: "Növeld a Google értékeléseid számát egyszerűen és gyorsan NFC technológiával.",
+    description:
+      "Növeld a Google értékeléseid számát egyszerűen és gyorsan NFC technológiával.",
     url: "https://tapview.hu",
     siteName: "Tapview",
     locale: "hu_HU",
