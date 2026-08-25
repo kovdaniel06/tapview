@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Show, SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import { Menu, X, HelpCircle, Sparkles, Tag, MessageCircleQuestion, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -43,9 +44,13 @@ export default function Navbar() {
         
         {/* LOGO */}
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#4285F4] font-bold text-white shadow-lg shadow-blue-500/30">
-            T
-          </div>
+          <Image
+            src="/icon.png"
+            alt="Tapview Logo"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-xl object-contain shadow-lg shadow-blue-500/30"
+          />
           <div>
             <h1 className="text-lg font-bold tracking-wide text-white">
               TAP<span className="text-[#4285F4]">VIEW</span>

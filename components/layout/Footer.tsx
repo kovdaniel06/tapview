@@ -274,7 +274,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="block text-lg font-extrabold leading-tight tracking-tight text-white">
-                  Tap<span className="text-[#4285F4]">View</span>
+                  TAP<span className="text-[#4285F4]">VIEW</span>
                 </span>
                 <span className="block text-xs text-neutral-500">
                   Google Review NFC
@@ -328,7 +328,7 @@ export default function Footer() {
 
         {/* BOTTOM BAR */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-8 text-xs text-neutral-500 sm:flex-row">
-          <p>© {new Date().getFullYear()} Tapview. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} TAPVIEW. All rights reserved.</p>
 
           <div className="flex items-center gap-5">
             <p className="flex items-center gap-1.5">
