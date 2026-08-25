@@ -3,8 +3,16 @@ import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
-  title: "Project X99",
-  description: "NFC Google Review Stand",
+  title: "Tapview - Szerezz több Google értékelést egyetlen érintéssel",
+  description: "Segíts az elégedett ügyfeleknek azonnal Google értékelést hagyni prémium NFC kártyákkal és állványokkal.",
+  openGraph: {
+    title: "Tapview - NFC Google Értékelő Állványok",
+    description: "Növeld a Google értékeléseid számát egyszerűen és gyorsan NFC technológiával.",
+    url: "https://tapview.hu",
+    siteName: "Tapview",
+    locale: "hu_HU",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en" data-scroll-behavior="smooth">
+      <html lang="hu" data-scroll-behavior="smooth">
         <body>{children}</body>
       </html>
     </ClerkProvider>
